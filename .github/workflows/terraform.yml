@@ -2,7 +2,7 @@ name: 'Terraform CI'
 
 on:
   pull_request:
-    types: [opened]
+    types: opened
 
 jobs:
   terraform:
