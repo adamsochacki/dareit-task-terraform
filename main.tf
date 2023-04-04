@@ -22,3 +22,10 @@ resource "google_compute_instance" "dareit-vm-ci-task7" {
     }
   }
 }
+
+resource "google_storage_bucket" "dareit-task7-branch" {
+  name          = "new_branch_bucket_task7"
+  location      = "US"
+
+  uniform_bucket_level_access = true
+}
