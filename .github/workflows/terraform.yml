@@ -3,9 +3,6 @@ name: 'Terraform CI'
 on:
   pull_request:
     types: opened
-    branches: 
-    - main
-    - feat/add-bucket
 
 jobs:
   terraform:
