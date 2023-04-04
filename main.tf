@@ -1,9 +1,9 @@
-resource "google_compute_instance" "dareit-vm-ci-task7" {
-  name         = "dareit-vm-tf-ci-task7"
+resource "google_compute_instance" "dareit-vm-ci-task7-second-branch-vm" {
+  name         = "dareit-vm-tf-ci-task7-second-branch-vm"
   machine_type = "e2-medium"
   zone         = "us-central1-a"
 
-  tags = ["dareit", "debian11"]
+  tags = ["dareit", "debian11", "secondbranch"]
 
   boot_disk {
     initialize_params {
