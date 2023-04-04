@@ -1,9 +1,9 @@
-resource "google_compute_instance" "dareit-vm-ci-task7-second-branch-vm" {
-  name         = "dareit-vm-tf-ci-task7-second-branch-vm"
+resource "google_compute_instance" "dareit-vm-ci-task7" {
+  name         = "dareit-vm-tf-ci-task7"
   machine_type = "e2-medium"
   zone         = "us-central1-a"
 
-  tags = ["dareit", "debian11", "secondbranch"]
+  tags = ["dareit", "debian11"]
 
   boot_disk {
     initialize_params {
@@ -21,4 +21,11 @@ resource "google_compute_instance" "dareit-vm-ci-task7-second-branch-vm" {
       // Ephemeral public IP
     }
   }
+}
+
+resource "google_storage_bucket" "dareit-task7-branch" {
+  name          = "new_branch_bucket_task7"
+  location      = "US"
+
+  uniform_bucket_level_access = true
 }
